@@ -1,0 +1,8 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/koharudin/mk-sekolah.git
+	branch = main
+[submodule "app2"]
+	path = app2
+	url = https://github.com/koharudin/mk-sekolah.git
+	branch = main
