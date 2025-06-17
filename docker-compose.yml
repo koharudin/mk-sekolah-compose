@@ -34,8 +34,20 @@ services:
       context: app
       dockerfile: Dockerfile
     ports:
-      - 2000:80
+      - 2003:80
     command: bash -c "chown www-data:www-data -R /var/www/storage && composer update && apache2-foreground"
     volumes:
       - ./app:/var/www
       - ./app/public:/var/www/html
+
+  app2:
+    tty: true
+    build:
+      context: app2
+      dockerfile: Dockerfile
+    ports:
+      - 2004:80
+    command: bash -c "chown www-data:www-data -R /var/www/storage && composer update && apache2-foreground"
+    volumes:
+      - ./app2:/var/www
+      - ./app2/public:/var/www/html
