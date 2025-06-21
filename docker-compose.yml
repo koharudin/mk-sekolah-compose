@@ -24,3 +24,5 @@ services:
     volumes:
       - ./app:/var/www
       - ./app/public:/var/www/html
+      - ./conf:/temp/conf
+      - ./conf/php:/usr/local/etc/php
